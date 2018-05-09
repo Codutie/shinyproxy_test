@@ -1,22 +1,17 @@
 
-# ShinyProxy Template
+# ShinyProxy Test
 
-This repository provides a template to deploy your own Shiny apps on [ShinyProxy](https://www.shinyproxy.io).
 
-Full explanation on the contents of this repository is offered at
-
-https://www.shinyproxy.io/deploying-apps/
-
-The purpose of this repository is to customize it for your needs, but if you want to build a Docker image from the Dockerfile in this repository, navigate into the root directory of this repository and run
+## Docker build of the R shinyapp ```(/euler)```
 
 ```
-sudo docker build -t openanalytics/shinyproxy-template .
+sudo docker build -t shinyproxy/test .
 ```
 
-Running the image for testing purposes outside ShinyProxy can be done using e.g.
-
+## Run shinyproxy
 ```
-sudo docker run -it -p 3838:3838 openanalytics/shinyproxy-template
+java -jar shinyproxy-1.1.0.jar
 ```
 
-(c) Copyright Open Analytics NV, 2016-2018.
+point your browser to [http://localhost:8080](http://localhost:8080)
+
